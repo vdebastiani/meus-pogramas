@@ -1,0 +1,43 @@
+#include <stdio.h>
+int main()
+{
+    float aulas;
+    float faltas;
+    float presencas;
+    float freq;
+    float nota;
+
+    printf("digite as aulas :\n");
+    scanf("%f", &aulas);
+
+    printf("digite as faltas :\n");
+    scanf("%f", &faltas);
+
+    printf("digite a nota \n"); 
+    scanf("%f", &nota); 
+    
+    
+    presencas = aulas - faltas;
+    freq=(presencas*100/aulas);
+
+    if (freq>=75&&nota>=7){
+        printf("presencas %.0f\n",presencas);
+        printf("frequencia %.2f%%\n",freq); 
+        printf("nota %f \n", nota);
+        printf("aprovado");
+    }
+    else if (freq>=75&&nota<7)
+    {
+        printf("presencas %.0f\n",presencas);
+        printf("frequencia %.2f%%\n",freq); 
+        printf("nota %f \n", nota);
+        printf("recuperacao"); 
+   } 
+   else{
+        printf("presencas %.0f\n",presencas);
+        printf("frequencia %.2f%%\n",freq); 
+        printf("nota %f \n", nota);
+        printf("reprovado");    
+   }
+return 0;
+}
