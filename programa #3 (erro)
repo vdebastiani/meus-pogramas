@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+   float nota1; 
+   float nota2; 
+   float media; 
+
+  printf ("digite nota 1 \n"); 
+  scanf("%f", &nota1); 
+
+  printf("digite nota 2 \n"); 
+  scanf("%f", &nota2); 
+
+  media = (nota1 + nota2)/2; 
+
+  while (media<5){
+    printf ("digite de novo nota 1 \n"); 
+    scanf("%f", &nota1); 
+
+    printf("digite de novo nota 2 \n"); 
+    scanf("%f", &nota2); 
+  }  
+  do{
+    printf("aprovado \n");
+  }while(media>=5); 
+  
+  return 0;
+}
