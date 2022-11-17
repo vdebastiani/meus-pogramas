@@ -1,21 +1,23 @@
 #include <stdio.h>
+int main()  {
 
-int main() 
-{ 
-    int i; 
-    int inicio; 
-    int fim; 
-    printf("digite o inicio\n"); 
-    scanf("%d", &inicio); 
-    printf("digite o fim\n");
-    scanf("%d", &fim);
-    i=inicio;
-    
-    while (i <=fim){
-        if(i%2==0){
-        printf("%d\n",i);
+    int val,maior,menor;
+    printf("digite o valor\n ");
+    scanf("%d",&val);
+
+    while (val!=0){
+        if (val>maior){
+            maior=val;
         }
-    i=i+1;
+        if(val<menor){
+            menor=val;
+        }
+        printf("digite o valor \n ");
+        scanf("%d",&val);
     }
-    return 0;
+
+    printf("maior %d\n", maior);
+    printf("menor %d\n", menor);
+
+return 0;
 }
